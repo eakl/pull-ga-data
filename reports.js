@@ -34,7 +34,7 @@ function getOpts (opts) {
         id: 'ga:93825837',
         from: from,
         to: to,
-        dimensions: 'ga:date,ga:eventLabel,ga:adwordsCampaignID,ga:country,ga:city,ga:deviceCategory,ga:sourceMedium',
+        dimensions: 'ga:date,ga:eventLabel,ga:adGroup,ga:country,ga:city,ga:deviceCategory,ga:sourceMedium',
         metrics: 'ga:uniqueEvents',
         sortby: 'ga:date',
         order: 'ASC',
@@ -114,6 +114,7 @@ function Usage (error) {
 
     --report            Extracts the given report (${Chalk.red('required')})
         nima                - Nima report
+        nima-kw             - Nima report (including keyword group)
         signup              - Signup report
         signup_google       - Signup (Google button) report
         campaign            - Campaign report
