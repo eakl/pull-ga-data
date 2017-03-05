@@ -114,7 +114,6 @@ function Usage (error) {
 
     --report            Extracts the given report (${Chalk.red('required')})
         nima                - Nima report
-        nima-kw             - Nima report (including keyword group)
         signup              - Signup report
         signup_google       - Signup (Google button) report
         campaign            - Campaign report
