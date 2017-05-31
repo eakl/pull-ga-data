@@ -14,7 +14,7 @@ const Argv = require('minimist')(process.argv.slice(2))
 const oauth2Client = new Google.auth.OAuth2()
 const PAGE_SIZE = 5000
 
-Assert(process.env.GOOGLE_API_JSON, 'Missing env `GOOGLE_API_JSON`')
+Assert(process.env.GOOGLE_API_ANALYTICS, 'Missing env `GOOGLE_API_JSON`')
 
 if (require.main === module) {
   const params = parseOpts(Argv)
@@ -25,7 +25,7 @@ function getJwtClient () {
   const scopes = [
     'https://www.googleapis.com/auth/analytics.readonly'
   ]
-  const credentials = require(process.env.GOOGLE_API_JSON)
+  const credentials = require(process.env.GOOGLE_API_ANALYTICS)
 
   return new Google.auth.JWT(
     credentials.client_email,
